@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragments/layout}">
+
+<head>
+    <!-- Title -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/css/themes/timeline.css}" href="../static/styles/vendor/timeline.css">
+    <link rel="stylesheet" th:href="@{/styles/css/themes/plan.css}" href="../static/styles/vendor/plan.css">
+</head>
+
+<body layout:fragment="content">
+<div class="app-admin-wrap" style="height: 1000px;">
+    <div th:replace="fragments/sidebar :: sidebar"></div>
+    <!-- ============ Body content start ============= -->
+    <div class="main-content-wrap sidenav-open d-flex flex-column" >
+        <div class="breadcrumb">
+            <h2 class="Topic">Plan Next Week</h2>
+        </div>
+        <div class="separator-breadcrumb border-top"></div>
+        <div class="show-event">
+            <h4><b class="bold">วันที่</b>   5 มิถุนายน 2562</h4>
+            <table style="width:100%;" class="show-event-details">
+                <thead>
+                    <tr>
+                        <th><span class="dot"></span><b class="bold">Event:</b>XXXXX</th>
+                        <th><b class="bold">Time:</b>XX:XXX AM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th><span class="spance"></span><b class="bold">Location:</b>XXXXXXXX</th>
+                    <th><b class="bold">Note:</b>XXXXXXXX</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-12 mb-4" style="width:100%;">
+
+                <input type="submit" class="form-control add-event-button" value="Add Event"/>
+
+                <div class="card text-left">
+                    <div class="card-body">
+                       <div class="calendar-layout">
+                           <div class="row" style="width:100%!important;">
+                               <div class="col">
+                                    <div class="select-date">
+                                        <div class="breadcrumb">
+                                            <button class="btn-prev-date"><center><img th:src="@{/images/icons/back.png}" src="../static/images/icons/back.png" width="16px" style="padding-bottom:5px;padding-right:5px;"/></center></button>
+
+                                            <div class="show-select-date">
+                                                <b class="select-date-in-week">ศุกร์ 5</b>
+                                            </div>
+                                            <button class="btn-next-date"><center><img th:src="@{/images/icons/go.png}" src="../static/images/icons/go.png" width="16px" style="padding-bottom:5px;padding-left:5px;"/></center></button>
+                                        </div>
+                                    </div>
+                               </div>
+                               <div class="col">
+                                    <h3 class="month-plan">มิถุนายน 2562</h3>
+                               </div>
+                               <div class="col">
+                                    <!--space-->
+                               </div>
+                        </div>
+
+                           <table class="display table table-striped">
+                               <thead>
+                               <tr>
+                                   <th>อาทิตย์</th>
+                                   <th>จันทร์</th>
+                                   <th>อังคาร</th>
+                                   <th>พุธ</th>
+                                   <th>พฤหัส</th>
+                                   <th>ศุกร์</th>
+                                   <th>เสาร์</th>
+                               </tr>
+                               </thead>
+                               <tbody>
+                               <tr class="todo-calendar">
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date last-date-old-month">31</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">1</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">2</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">3</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">4</div>
+                                       </div>
+                                   </td>
+                                   <td class="current-date">
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">5</div>
+
+                                       </div>
+
+                                       <div class="row task-color">
+                                           <div class="col"><span class="dot"></span></div>
+                                           <div class="col date current-date-current-month"></div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">6</div>
+                                       </div>
+                                   </td>
+                                   <td style="width: 37px!important;padding-top:30px!important;padding-left: 20px!important;padding-right:0px!important;border:none!important;">
+                                          <p class="to-do">To</p>
+                                          <p class="to-do"> Do</p>
+                                   </td>
+                               </tr>
+
+                               <tr class="plan-calendar">
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">7</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">8</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">9</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">10</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">11</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">12</div>
+
+                                       </div>
+
+                                       <div class="row task-color">
+                                           <div class="col"><span class="dot"></span></div>
+                                           <div class="col date current-date-current-month"></div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">13</div>
+                                       </div>
+                                   </td>
+                                   <td style="width: 37px!important;padding-top:30px!important;padding-left: 20px!important;padding-right:0px!important;border:none!important;">
+                                       <p class="to-do"></p>
+                                       <p class="to-do">Plan</p>
+                                   </td>
+                               </tr>
+
+                               <tr class="default-calendar">
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">14</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">15</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">16</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">17</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">18</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">19</div>
+
+                                       </div>
+
+                                       <div class="row task-color">
+                                           <div class="col"><span class="dot"></span></div>
+                                           <div class="col date current-date-current-month"></div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">20</div>
+                                       </div>
+                                   </td>
+                               </tr>
+
+                               <tr class="default-calendar">
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">21</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">22</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">23</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">24</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">25</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">26</div>
+
+                                       </div>
+
+                                       <div class="row task-color">
+                                           <div class="col"><span class="dot"></span></div>
+                                           <div class="col date current-date-current-month"></div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">27</div>
+                                       </div>
+                                   </td>
+                               </tr>
+
+                               <tr class="default-calendar">
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">28</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">29</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date current-date-current-month">30</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number">1</div></div>
+                                           <div class="col date current-date-current-month">31</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">1</div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"><div class="task-number-next">1</div></div>
+                                           <div class="col date last-date-old-month">2</div>
+
+                                       </div>
+
+                                       <div class="row task-color">
+                                           <div class="col"><span class="dot"></span></div>
+                                           <div class="col date last-date-old-month"></div>
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="row">
+                                           <div class="col task"></div>
+                                           <div class="col date last-date-old-month">3</div>
+                                       </div>
+                                   </td>
+                               </tr>
+
+                               </tbody>
+                           </table>
+                       </div>
+
+                        <!-- calendar section -->
+
+
+                    </div>
+            </div>
+            <!-- end of col -->
+        <!-- end of row -->
+        <!--=============== End app-admin-wrap ================-->
+        <div th:replace="fragments/footer :: footer"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+</body>
+</html>

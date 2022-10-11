@@ -10,7 +10,7 @@
     "firebase": "^5.5.9",
     "native-base": "^2.8.1",
     "react": "16.6.1",
-    "react-native": "0.57.5",
+    "react-native": "0.70.2",
     "react-native-atoz-listview": "0.0.7",
     "react-native-easy-grid": "^0.2.0",
     "react-native-elements": "^0.19.1",
